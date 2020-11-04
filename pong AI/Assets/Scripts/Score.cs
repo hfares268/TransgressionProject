@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
-public class Text : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    public TextMeshProUGUI score;
+    public Transform ball;
+    public Text scoreText;
     // Start is called before the first frame update
-    void Start()
-    {
-        score = FindObjectOfType<TextMeshProUGUI>();
-    }
+   
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "0-0";
+        scoreText.text = ball.position.ToString("0");
     }
 }
